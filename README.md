@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div align="center">
   <br>
   <img src="/images/reverie-text.png" alt="Reverie" width="200"/>
@@ -143,3 +144,6 @@ reverie - _a state of being pleasantly lost in one's thoughts; a daydream._<br><
 ## License
 
 MIT
+=======
+# stephanie-prufrock.github.io
+>>>>>>> 78bd33c74c66d0e03c9fa333b7175187039f10dd
