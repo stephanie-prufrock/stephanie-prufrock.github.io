@@ -12,7 +12,7 @@ author: Stephanie Prufrock
 description: 건축가 아님
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-# avatar: /images/reverie.png
+avatar: /images/profile_paris.jpg
 
 #
 # Flags below are optional
@@ -21,7 +21,7 @@ description: 건축가 아님
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
-  email: stephanie.jungt@gmail.com
+  email: stephanie.prufrock@gmail.com
   facebook:
   flickr:
   github: 
@@ -29,9 +29,9 @@ footer-links:
   linkedin: 
   pinterest:
   rss: 
-  twitter: amit_mercha
+  twitter: 
   stackoverflow: 
-  youtube: channel/stephanie-jung-rwx
+  youtube: '@stephanie-jung-rwx'
   googleplus: # anything in your profile username that comes after plus.google.com/
   playconsole:
   mastodon: # <your-mastodon-instance>/@<your-user-name> eg. fosstodon.org/@username
@@ -55,7 +55,7 @@ enforce_ssl: https://stephanie-prufrock.github.io
 # (http://yourusername.github.io/repository-name)
 # and NOT your User repository (http://yourusername.github.io)
 # then add in the baseurl here, like this: "/repository-name"
-baseurl: "/stephanie-prfurock"
+baseurl: ""
 
 #
 # !! You don't need to change any of the configuration flags below !!
@@ -100,3 +100,10 @@ exclude:
   - README.md
   - CNAME
 
+collections:
+  piano:
+    output: true
+  literature:
+    output: true
+  dev:
+    output: true

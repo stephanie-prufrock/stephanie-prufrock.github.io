@@ -1,0 +1,13 @@
+main:
+  - title: "Home"
+    url: "/"
+  - title: "Life as a Cloud Architect💻"
+    url: "/dev/"
+  - title: "Piano 🎹"
+    url: "/piano/"
+  - title: "Literature 📖"
+    url: "/literature/"
+  - title: "Yoga 🧘‍♀️"
+    url: "/yoga"
+
+

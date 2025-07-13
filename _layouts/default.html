@@ -21,18 +21,15 @@
         <div class="container">
           <header class="masthead clearfix">
             <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.baseurl }}{{ site.avatar }}" alt="{{ site.title }}" /></a>
-
             <div class="site-info">
               <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
               <p class="site-description">{{ site.description }}</p> 
             </div>
 
             <nav>
-              <a href="{{ site.baseurl }}/">Home</a>
-              <a href="{{ site.baseurl }}/getting-started">Getting Started</a>
-              <a href="{{ site.baseurl }}/search">Search</a>
-              <a href="{{ site.baseurl }}/about">About</a>
-              <a href="{{ site.baseurl }}/archive">Archive</a>
+              {% for item in site.data.navigation.main %}
+                <a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
+              {% endfor %}
             </nav>
           </header>
         </div>
@@ -40,7 +37,10 @@
 
       <div class="wrapper-main">
         <div id="main" role="main" class="container">
-          {{ content }}
+          <div>  
+            {% assign latest_piano = site.piano | sort: 'date' | reverse | first %}
+              <h2><a href="{{ latest_piano.url }}">{{ latest_piano.title }}</a></h2>
+          </div>
         </div>
       </div>
 
