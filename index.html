@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div class="posts">
+<!-- <div class="posts">
   {% for post in paginator.posts %}
     <article class="post">
       <a href="{{ site.baseurl }}{{ post.url }}">
@@ -13,12 +13,57 @@ layout: default
         </div>
       </a>
       <div class="entry">
-        {{ post.excerpt }}
       </div>
 
       <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
     </article>
-  {% endfor %}
+  {% endfor %} -->
+
+
+  <div class="card-container">
+
+  {% assign latest_dev = site.dev | sort: 'date' | reverse | first %}
+    {% if latest_dev %}
+      <div class="post-card dev-card">
+       <p>
+          <a href="{{ latest_dev.url }}">
+           <h2 class="post-title">{{ latest_dev.title }}</h2> <p class ="post-date">{{latest_dev.date}} </p>
+          </a> 
+        </p>
+      </div>
+  {% endif %}
+
+  {% assign latest_piano = site.piano | sort: 'date' | reverse | first %}
+  {% if latest_piano %}
+    <div class="post-card piano-card">
+      <p>
+      <a href="{{ latest_piano.url }}">  <h2 class="post-title"> {{ latest_piano.title }} </h2> </a>
+      </a></p>
+    </div>
+  {% endif %}
+
+  {% assign latest_literature = site.literature | sort: 'date' | reverse | first %}
+  {% if latest_dev %}
+    <div class="post-card lit-card">
+         <a href="{{ latest_literature.url }}">
+    
+        <h2 class="post-title">{{ latest_literature.title }}</h2>
+      </a>
+    </div>
+  {% endif %}
+
+  {% assign latest_yoga = site.yoga | sort: 'date' | reverse | first %}
+  {% if latest_yoga %}
+    <div class="post-card yoga-card">
+  
+      <a href="{{ latest_yoga.url }}">
+        <h2 class="post-title">{{ latest_yoga.title }}</h2>
+      </a>
+    </div>
+  {% endif %}
+
+</div>
+
 
   <!-- pagination -->
   {% if paginator.total_pages > 1 %}

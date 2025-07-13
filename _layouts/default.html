@@ -37,10 +37,18 @@
 
       <div class="wrapper-main">
         <div id="main" role="main" class="container">
-          <div>  
+          {{ title }}
+        </div>
+        <div id="main" role="main" class="container">
+          <!-- <div>  
             {% assign latest_piano = site.piano | sort: 'date' | reverse | first %}
               <h2><a href="{{ latest_piano.url }}">{{ latest_piano.title }}</a></h2>
           </div>
+          <div>  
+            {% assign latest_dev = site.dev | sort: 'date' | reverse | first %}
+              <h2><a href="{{ latest_dev.url }}">{{ latest_dev.title }}</a></h2>
+          </div> -->
+          {{ content }}
         </div>
       </div>
 
